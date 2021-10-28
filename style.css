@@ -136,13 +136,79 @@ nav .userCityWrapper {
   max-width: 19em;
   height: auto;
   padding: 3em;
+  -webkit-transition: -webkit-transform .2s;
+  transition: -webkit-transform .2s;
+  transition: transform .2s;
+  transition: transform .2s, -webkit-transform .2s;
+}
+
+.bWrapper img:hover {
+  -webkit-transform: scale(1.3);
+          transform: scale(1.3);
+}
+
+.b.a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.baWrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.slot {
+  max-width: 20em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 1em;
+}
+
+.slot img {
+  max-width: 100%;
+  height: auto;
+}
+
+.slot h3 {
+  font-size: 1.7em;
+}
+
+.slot h4 {
+  text-align: center;
+  font-family: cursive;
+  font-weight: 100;
+}
+
+.slot p {
+  font-size: 1.3em;
+  font-weight: bolder;
 }
 
 .c {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding-top: 18em;
+  padding-top: 12em;
+  height: 22em;
 }
 
 .c .backgroundDiv {
@@ -150,23 +216,32 @@ nav .userCityWrapper {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
-  height: 20em;
+  height: 2em;
   opacity: 0.6;
   position: absolute;
   width: 100%;
+  height: 10em;
   z-index: -1;
 }
 
 .bigText {
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.bigText p {
   text-transform: uppercase;
   font-size: 3em;
   font-family: cursive;
   font-weight: 600;
-  height: 8em;
-  top: 2em;
 }
 
 .d {
@@ -187,6 +262,11 @@ nav .userCityWrapper {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+
+#review:hover {
+  background: black;
+  color: white;
 }
 
 .regularGreyText {
