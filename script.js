@@ -1,8 +1,6 @@
 //open more nail samples
 const extendShowCaseBtn = document.getElementById("extendShowCaseBtn");
 extendShowCaseBtn.addEventListener("click", theExtend);
-console.log("chuj");
-
 function theExtend(){
   
     let images = document.getElementsByClassName("bWrapper")[0].getElementsByTagName("img");
