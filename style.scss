@@ -13,13 +13,14 @@ html{
     box-sizing: inherit;
 }
 body,h1,p,ul,li,a{
-     overflow-x: hidden;
+    list-style: none;
     margin: 0;
     padding: 0;
     text-decoration: none;
   }
 //base styles
 body{
+    overflow-x: hidden;
     min-width: 320px;
     font-family: "PT Sans";
     font-size: 16px;
@@ -99,8 +100,9 @@ nav{
         transform: scale(1.3);
     }
 }
-.b.a{
+.ba{
     display: flex;
+    padding-top: 5em;
 }
 .baWrapper{
     display: flex;
@@ -115,12 +117,19 @@ nav{
     flex-direction: column;
     align-items: center;
     padding: 1em;
+    height: auto;
+    div{
+        min-height: 26em;
+    }
     img{
         max-width: 100%;
-        height: auto;
+        object-fit: cover;
+        height:100%;
     }
     h3{
         font-size: 1.7em;
+        text-align: center;
+        min-height: 4em;
     }
     h4{
         text-align: center;
@@ -131,7 +140,6 @@ nav{
         font-size: 1.3em;
         font-weight: bolder;
     }
-
 }
 .c{
     display: flex;
