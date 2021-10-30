@@ -2,8 +2,11 @@
 @font-face {
     font-family: "PT Sans";
     src: url(./fonts/PTSans-Regular.ttf);
-  }
-
+}
+@font-face {
+    font-family: "Lobster";
+    src: url(./fonts/Lobster-Regular.ttf);
+}
 // variables
 $light-grey: #f4f4f6;
 $light-blue: #ccdfef;
@@ -139,6 +142,26 @@ nav{
     border: 1em doted black;
     border-radius: 0.5em;
 }
+  
+[data-title]:hover::before {
+	content: attr(data-title);
+	position: absolute;
+  margin-top:33px;
+	padding: 10px;
+	background: #8fa1a7;
+	color: #fff;
+	font-size: 14px;
+  width:300px;
+	white-space: wrap;
+}
+[data-title]:hover::after {
+	content: '';
+	position: absolute;
+	bottom: -12px;
+	left: 8px;
+	border: 8px solid transparent;	
+	border-bottom: 8px solid #000;
+}
 .expand-btn:hover{
     cursor: pointer;
 }
@@ -170,6 +193,7 @@ nav{
     align-items: center;
     padding: 1em;
     height: auto;
+    
     div{
         min-height: 26em;
     }
@@ -187,6 +211,8 @@ nav{
         text-align: center;
         font-family:cursive ;
         font-weight: 100;
+
+
     }
     p{
         font-size: 1.3em;
@@ -227,14 +253,21 @@ nav{
     display: flex;
     align-items: center;
     justify-content: center;
+    // font-family: "Lobster";
 }
 .bigText p{
-          text-transform: uppercase;
-    font-size: 3em;
+          text-transform: lowercase;
+    font-size: 4em;
     font-family: cursive;
     font-weight: 600;
     //  height: auto;
-     
+    font-family: "Lobster";
+padding-top: 1.8em;
+}
+@media screen and (min-width:1024px)  {
+    .bigText p{
+        font-size: 6em;
+    }
 }
 .d{
     display: flex;
@@ -248,7 +281,7 @@ nav{
 }
 @media screen and (min-width:768px)  {
     .d{
-        padding-top: 15em;
+        padding-top: 16em;
     }   
    }
 #review:hover{
@@ -274,11 +307,10 @@ color: rgb(255, 255, 255);
 }
 footer{
     display: flex;
-  
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    padding-top: 2em ;
+    padding-top: 4em ;
     padding-bottom: 1em;
     .media ul{
         display: flex;

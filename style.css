@@ -3,6 +3,11 @@
   src: url(./fonts/PTSans-Regular.ttf);
 }
 
+@font-face {
+  font-family: "Lobster";
+  src: url(./fonts/Lobster-Regular.ttf);
+}
+
 html {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -195,6 +200,27 @@ nav .userCityWrapper {
   border-radius: 0.5em;
 }
 
+[data-title]:hover::before {
+  content: attr(data-title);
+  position: absolute;
+  margin-top: 33px;
+  padding: 10px;
+  background: #8fa1a7;
+  color: #fff;
+  font-size: 14px;
+  width: 300px;
+  white-space: wrap;
+}
+
+[data-title]:hover::after {
+  content: '';
+  position: absolute;
+  bottom: -12px;
+  left: 8px;
+  border: 8px solid transparent;
+  border-bottom: 8px solid #000;
+}
+
 .expand-btn:hover {
   cursor: pointer;
 }
@@ -328,10 +354,18 @@ nav .userCityWrapper {
 }
 
 .bigText p {
-  text-transform: uppercase;
-  font-size: 3em;
+  text-transform: lowercase;
+  font-size: 4em;
   font-family: cursive;
   font-weight: 600;
+  font-family: "Lobster";
+  padding-top: 1.8em;
+}
+
+@media screen and (min-width: 1024px) {
+  .bigText p {
+    font-size: 6em;
+  }
 }
 
 .d {
@@ -356,7 +390,7 @@ nav .userCityWrapper {
 
 @media screen and (min-width: 768px) {
   .d {
-    padding-top: 15em;
+    padding-top: 16em;
   }
 }
 
@@ -400,7 +434,7 @@ footer {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding-top: 2em;
+  padding-top: 4em;
   padding-bottom: 1em;
 }
 
